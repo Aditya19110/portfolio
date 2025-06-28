@@ -1,12 +1,23 @@
-# React + Vite
+# 💼 Aditya Kulkarni – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio website built using **React**, designed to showcase my projects, skills, and achievements in Machine Learning, Cybersecurity, and Software Development.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+Check it out live at: [My Portfolio](https://portfolio-rho-one-deyst6b2pj.vercel.app/#home)
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🖥️ Clean and modern UI
+- 📱 Fully responsive design
+- 📂 Dynamic project section
+- 🧠 Highlights skills in ML, Cybersecurity, DSA
+- 📄 Resume download or view option
+- 🌐 Hosted with Vercel (or Netlify)
+---
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React.js
+- 🎨 CSS3 / TailwindCSS (or your styling choice)
+- 📦 React Icons / Framer Motion (if used)
+- 🔧 Vercel (Deployment)
+---
