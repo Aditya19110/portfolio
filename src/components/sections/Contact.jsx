@@ -10,7 +10,6 @@ export const Contact = () => {
         message: "",
     });
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -19,10 +18,9 @@ export const Contact = () => {
                 alert("Message Sent!");
                 setFormData({ name: "", email: "", message: "" });
             })
-            .catch((error) => {
-        console.error("EmailJS Error:", error); // ✅ Add this line
-        alert("Message Failed. See console for details."); // Optional: clear user confusion
-    });
+            .catch(() => {
+                alert("Message Failed. Please try again later.");
+            });
     };
 
     return (
@@ -88,6 +86,14 @@ export const Contact = () => {
                             >
                                 <FaLinkedin className="text-xl" />
                                 Connect on LinkedIn
+                            </a>
+                            <a
+                                href="https://drive.google.com/file/d/1UlJIYBG-KBLGbNm72F9pGXGGae8wjXse/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full flex items-center justify-center gap-3 py-3 px-6 font-semibold rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:scale-105 shadow-md transition-transform duration-300"
+                            >
+                                📄 View Resume
                             </a>
                         </div>
                     </form>
