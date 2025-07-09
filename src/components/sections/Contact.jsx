@@ -88,7 +88,7 @@ export const Contact = () => {
                                 Connect on LinkedIn
                             </a>
                             <a
-                                href="https://drive.google.com/file/d/1UlJIYBG-KBLGbNm72F9pGXGGae8wjXse/view?usp=sharing"
+                                href="https://drive.google.com/file/d/19m2Yed6bo3c1jtj8V7Ril8_JIy-JqUPI/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full flex items-center justify-center gap-3 py-3 px-6 font-semibold rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:scale-105 shadow-md transition-transform duration-300"
