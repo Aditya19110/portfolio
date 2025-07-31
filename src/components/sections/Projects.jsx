@@ -58,46 +58,58 @@ export const Projects = () => {
                                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ delay: index * 0.2, duration: 0.5 }}
-                                className="rounded-xl p-6 border border-white/10 bg-black/30 backdrop-blur-md shadow-md hover:-translate-y-1 transition duration-300"
+                                className="group rounded-2xl p-8 border border-white/10 bg-black/40 backdrop-blur-md shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 hover:border-blue-500/30 relative overflow-hidden"
                             >
-                                <h3 className={`text-2xl font-semibold mb-3 bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                                {/* Gradient Overlay */}
+                                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                                
+                                <div className="relative z-10">
+                                    <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${project.color} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300`}>
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-gray-300 mb-6 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                                        {project.description}
+                                    </p>
 
-                                <div className="flex flex-wrap gap-2 mt-3 mb-4">
-                                    {project.tech.map((tech, i) => (
-                                        <span
-                                            key={i}
-                                            className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-xs font-medium hover:bg-blue-500/20 transition"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
+                                    <div className="flex flex-wrap gap-2 mt-4 mb-6">
+                                        {project.tech.map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="bg-blue-500/10 text-blue-400 py-2 px-4 rounded-full text-xs font-medium hover:bg-blue-500/20 hover:scale-105 transition-all duration-300 border border-blue-500/20"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex gap-4">
+                                        {project.github && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-all duration-300 group/link hover:scale-105"
+                                            >
+                                                <FaGithub className="group-hover/link:rotate-12 transition-transform duration-300" /> 
+                                                GitHub
+                                            </a>
+                                        )}
+                                        {project.live && (
+                                            <a
+                                                href={project.live}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 text-sm text-gray-300 hover:text-green-400 transition-all duration-300 group/link hover:scale-105"
+                                            >
+                                                <FaExternalLinkAlt className="group-hover/link:rotate-12 transition-transform duration-300" /> 
+                                                Live Demo
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
 
-                                <div className="flex gap-3">
-                                    {project.github && (
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-sm text-gray-200 hover:text-blue-400 transition"
-                                        >
-                                            <FaGithub /> GitHub
-                                        </a>
-                                    )}
-                                    {project.live && (
-                                        <a
-                                            href={project.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-sm text-gray-200 hover:text-green-400 transition"
-                                        >
-                                            <FaExternalLinkAlt /> Live Demo
-                                        </a>
-                                    )}
-                                </div>
+                                {/* Corner Accent */}
+                                <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl ${project.color} opacity-10 rounded-bl-full`}></div>
                             </motion.div>
                         ))}
                     </div>
