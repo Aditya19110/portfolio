@@ -10,7 +10,7 @@ export const Projects = () => {
             tech: ["React", "Node.js", "WebSocket", "Express", "MongoDB"],
             color: "from-blue-500 to-purple-600",
             github: "https://github.com/Aditya19110/Real-Time-Collaborative-Code-Editor",
-            live: "https://real-time-collaborative-code-editor-nine.vercel.app/",
+            live: "https://code-together-ak.vercel.app/",
         },
         {
             title: "Silent Scan",
