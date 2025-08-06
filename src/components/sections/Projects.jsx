@@ -4,39 +4,39 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Projects = () => {
     const projects = [
-        {
-            title: "Echo Code",
-            description: "A real-time collaborative code editor that enables multiple developers to write, edit, and debug code simultaneously with WebSocket-powered live sync and activity tracking.",
-            tech: ["React", "Node.js", "WebSocket", "Express", "MongoDB"],
-            color: "from-blue-500 to-purple-600",
-            github: "https://github.com/Aditya19110/Real-Time-Collaborative-Code-Editor",
-            live: "https://code-together-ak.vercel.app/",
-        },
-        {
-            title: "Silent Scan",
-            description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
-            tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
-            color: "from-red-500 to-yellow-500",
-            github: "https://github.com/Aditya19110/Static-Analyzer",
-            live: "https://static-analyzer.vercel.app/",
-        },
-        {
-            title: "CalAnalyst",
-            description: "A cancer care support chatbot powered by NLP. Helps users understand symptoms, get guidance, and find resources to manage early cancer detection.",
-            tech: ["Python", "NLP", "Flask", "OpenAI API"],
-            color: "from-pink-500 to-red-600",
-            github: "https://github.com/Aditya19110/Team_sentinels_Unnati-2024",
-            live: "",
-        },
-        {
-            title: "LogMyBite",
-            description: "A calorie tracker mobile app built using Flutter. Helps users log daily meals, count calories, and stay fit with smart suggestions and nutrition tracking.",
-            tech: ["Flutter", "Firebase", "Dart", "GCP"],
-            color: "from-green-400 to-blue-500",
-            github: "https://github.com/Aditya19110/logmybite",
-            live: "",
-        }
-    ];
+    {
+        title: "Echo Code",
+        description: "A real-time collaborative code editor that enables multiple developers to write, edit, and debug code simultaneously with WebSocket-powered live sync and activity tracking.",
+        tech: ["React", "Node.js", "WebSocket", "Express", "MongoDB"],
+        color: "from-blue-500 to-purple-600",
+        github: "https://github.com/Aditya19110/Real-Time-Collaborative-Code-Editor",
+        live: "https://code-together-ak.vercel.app/",
+    },
+    {
+        title: "Silent Scan",
+        description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
+        tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
+        color: "from-red-500 to-yellow-500",
+        github: "https://github.com/Aditya19110/Static-Analyzer",
+        live: "https://static-analyzer.vercel.app/",
+    },
+    {
+        title: "AgriGuard",
+        description: "A smart agriculture assistant that detects crop diseases using image processing and ML, provides real-time alerts, and recommends remedies for better yield.",
+        tech: ["Python", "TensorFlow", "Flask", "OpenCV", "Firebase"],
+        color: "from-green-500 to-lime-500",
+        github: "https://github.com/Aditya19110/agri_guard",
+        live: "",
+    },
+    {
+        title: "Persona Extractor",
+        description: "An intelligent document processor that extracts and ranks relevant sections from PDFs based on the target persona and job-to-be-done using graph-based semantic analysis.",
+        tech: ["Python", "FastAPI", "PyMuPDF", "NetworkX", "MiniLM"],
+        color: "from-indigo-500 to-cyan-500",
+        github: "https://github.com/Aditya19110/persona-extraction",
+        live: "",
+    }
+];
 
     return (
         <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-[#0a0a0a]">
