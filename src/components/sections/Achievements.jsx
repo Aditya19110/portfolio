@@ -12,12 +12,6 @@ export const Achievements = () => {
       color: "from-blue-500 to-purple-600"
     },
     {
-      title: "Microsoft Learn Student Ambassador",
-      description: "Selected as a Beta Microsoft Learn Student Ambassador, conducting workshops and tech events",
-      icon: "🏆",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
       title: "Full-Stack Projects",
       description: "Built and deployed multiple production-ready applications using modern tech stack",
       icon: "🚀",
