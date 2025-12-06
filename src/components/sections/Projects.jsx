@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { RevealOnScroll } from "../RevealOnScroll";
@@ -13,28 +14,33 @@ export const Projects = () => {
         live: "https://code-together-ak.vercel.app/",
     },
     {
+        title: "CollabSync",
+        description: "A modern, real-time Kanban board application built with the MERN stack and Socket.IO, featuring a premium glassmorphism UI, comprehensive task management, and seamless live collaboration.",
+        tech: ["MERN Stack", "Socket.IO", "Glassmorphism", "JWT"],
+        color: "from-teal-400 to-cyan-500",
+        github: "https://github.com/Aditya19110/collabsync",
+    },
+    {
+        title: "Calanalyst",
+        description: "A privacy-first, CPU-optimized AI chatbot for cancer-related inquiries, featuring RAG technology and a modern Glassmorphism UI. Powered by Intel's Neural Chat LLM.",
+        tech: ["Python", "RAG", "Intel OpenVINO", "LangChain"],
+        color: "from-pink-500 to-rose-600",
+        github: "https://github.com/Aditya19110/Calanalyst",
+    },
+    {
+        title: "Agro Hub",
+        description: "A comprehensive web platform connecting farmers with technology for buying, selling, and education. Includes marketplace and crop disease detection features.",
+        tech: ["HTML", "CSS", "JavaScript", "Flask", "ML"],
+        color: "from-green-500 to-lime-500",
+        github: "https://github.com/Aditya19110/Agro_Hub",
+    },
+    {
         title: "Silent Scan",
         description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
         tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
         color: "from-red-500 to-yellow-500",
         github: "https://github.com/Aditya19110/Static-Analyzer",
         live: "https://static-analyzer.vercel.app/",
-    },
-    {
-        title: "AgriGuard",
-        description: "A smart agriculture assistant that detects crop diseases using image processing and ML, provides real-time alerts, and recommends remedies for better yield.",
-        tech: ["Python", "TensorFlow", "Flask", "OpenCV", "Firebase"],
-        color: "from-green-500 to-lime-500",
-        github: "https://github.com/Aditya19110/agri_guard",
-        live: "",
-    },
-    {
-        title: "Persona Extractor",
-        description: "An intelligent document processor that extracts and ranks relevant sections from PDFs based on the target persona and job-to-be-done using graph-based semantic analysis.",
-        tech: ["Python", "FastAPI", "PyMuPDF", "NetworkX", "MiniLM"],
-        color: "from-indigo-500 to-cyan-500",
-        github: "https://github.com/Aditya19110/persona-extraction",
-        live: "",
     }
 ];
 
@@ -58,11 +64,11 @@ export const Projects = () => {
                                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ delay: index * 0.2, duration: 0.5 }}
-                                className="group rounded-2xl p-8 border border-white/10 bg-black/40 backdrop-blur-md shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 hover:border-blue-500/30 relative overflow-hidden"
+                                className="group rounded-2xl p-8 glass hover:bg-black/50 transition-all duration-500 hover:border-blue-500/30 relative overflow-hidden"
                             >
                                 {/* Gradient Overlay */}
                                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                                
+
                                 <div className="relative z-10">
                                     <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${project.color} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300`}>
                                         {project.title}
@@ -90,7 +96,7 @@ export const Projects = () => {
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-all duration-300 group/link hover:scale-105"
                                             >
-                                                <FaGithub className="group-hover/link:rotate-12 transition-transform duration-300" /> 
+                                                <FaGithub className="group-hover/link:rotate-12 transition-transform duration-300" />
                                                 GitHub
                                             </a>
                                         )}
@@ -101,7 +107,7 @@ export const Projects = () => {
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-2 text-sm text-gray-300 hover:text-green-400 transition-all duration-300 group/link hover:scale-105"
                                             >
-                                                <FaExternalLinkAlt className="group-hover/link:rotate-12 transition-transform duration-300" /> 
+                                                <FaExternalLinkAlt className="group-hover/link:rotate-12 transition-transform duration-300" />
                                                 Live Demo
                                             </a>
                                         )}

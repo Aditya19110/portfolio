@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { RevealOnScroll } from '../RevealOnScroll';
 import { FaStar, FaTrophy, FaQuoteLeft } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -59,7 +60,7 @@ export const Achievements = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1"
+                className="text-center glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="text-3xl mb-2">{stat.icon}</div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -80,7 +81,7 @@ export const Achievements = () => {
               >
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="text-4xl">{achievement.icon}</div>

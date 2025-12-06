@@ -18,9 +18,8 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
     return (
         <div
-            className={`fixed top-0 right-0 w-full h-full bg-[rgba(10,10,10,0.95)] backdrop-blur-xl shadow-xl z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out transform ${
-                menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-            }`}
+            className={`fixed top-0 right-0 w-full h-full glass z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out transform ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+                }`}
         >
             {/* Close button */}
             <button
@@ -42,9 +41,8 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                     <a
                         key={index}
                         href={item.href}
-                        className={`text-3xl font-semibold text-white transform transition-all duration-500 ${
-                            menuOpen ? `opacity-100 translate-y-0 ${item.delay}` : "opacity-0 translate-y-8"
-                        } hover:text-blue-400 hover:scale-110 focus:outline-none relative group`}
+                        className={`text-3xl font-semibold text-white transform transition-all duration-500 ${menuOpen ? `opacity-100 translate-y-0 ${item.delay}` : "opacity-0 translate-y-8"
+                            } hover:text-blue-400 hover:scale-110 focus:outline-none relative group`}
                         onClick={() => setMenuOpen(false)}
                     >
                         {item.text}

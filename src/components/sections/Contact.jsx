@@ -28,15 +28,15 @@ export const Contact = () => {
         <section id="contact" className="min-h-screen flex items-center justify-center py-24 px-4 bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#0a0a0a] text-white relative overflow-hidden">
             {/* Particle Background */}
             <ParticleBackground />
-            
+
             {/* Background Decoration */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
             </div>
-            
+
             <RevealOnScroll>
-                <div className="w-full max-w-2xl bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-8 md:p-12 relative z-10 hover:shadow-blue-500/10 transition-all duration-500">
+                <div className="w-full max-w-2xl glass rounded-3xl p-8 md:p-12 relative z-10 hover:shadow-blue-500/10 transition-all duration-500">
                     <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent text-center">
                         📬 Let's Connect
                     </h2>
@@ -49,7 +49,7 @@ export const Contact = () => {
                                 name="name"
                                 required
                                 value={formData.name}
-                                placeholder="John Doe"
+                                placeholder="Your Name"
                                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 transition-all duration-300 group-hover:border-white/20"
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             />
@@ -62,7 +62,7 @@ export const Contact = () => {
                                 name="email"
                                 required
                                 value={formData.email}
-                                placeholder="john@example.com"
+                                placeholder="mail@example.com"
                                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 transition-all duration-300 group-hover:border-white/20"
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             />

@@ -5,7 +5,7 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
-    return <nav className="fixed top-0 w-full z-50 bg-[rgba(10,10,10,0.85)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    return <nav className="fixed top-0 w-full z-50 glass border-b-0">
         <div className="max-w-5xl mx-auto px-4">
             <div className="flex justify-between items-center h-16">
                 <a href="#home" className="font-mono text-xl font-bold text-white hover:text-blue-400 transition-colors">
