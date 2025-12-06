@@ -19,6 +19,15 @@ export const Projects = () => {
         tech: ["MERN Stack", "Socket.IO", "Glassmorphism", "JWT"],
         color: "from-teal-400 to-cyan-500",
         github: "https://github.com/Aditya19110/collabsync",
+        live: "https://collabsync-ak.vercel.app/login",
+    },
+    {
+        title: "Silent Scan",
+        description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
+        tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
+        color: "from-red-500 to-yellow-500",
+        github: "https://github.com/Aditya19110/Static-Analyzer",
+        live: "https://static-analyzer.vercel.app/",
     },
     {
         title: "Calanalyst",
@@ -33,14 +42,6 @@ export const Projects = () => {
         tech: ["HTML", "CSS", "JavaScript", "Flask", "ML"],
         color: "from-green-500 to-lime-500",
         github: "https://github.com/Aditya19110/Agro_Hub",
-    },
-    {
-        title: "Silent Scan",
-        description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
-        tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
-        color: "from-red-500 to-yellow-500",
-        github: "https://github.com/Aditya19110/Static-Analyzer",
-        live: "https://static-analyzer.vercel.app/",
     }
 ];
 

@@ -137,15 +137,6 @@ export const About = () => {
                                     <li>Collaborated with Flutter team for seamless backend integration.</li>
                                 </ul>
                             </div>
-
-                            <div className="border-l-4 border-purple-500 pl-6 hover:bg-purple-500/5 p-4 rounded-r-lg transition-colors duration-300">
-                                    <p className="text-gray-100 font-semibold text-lg">Microsoft Learn Student Ambassador (Beta)</p>
-                                    <p className="text-purple-400 font-medium">Microsoft | Remote</p>
-                                    <p className="text-gray-500 text-sm mb-3">Sep 2023 – Present</p>
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        Conducted workshops, mentored peers, and promoted tech learning via events and open-source contributions.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
