@@ -5,45 +5,65 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Projects = () => {
     const projects = [
-    {
-        title: "Echo Code",
-        description: "A real-time collaborative code editor that enables multiple developers to write, edit, and debug code simultaneously with WebSocket-powered live sync and activity tracking.",
-        tech: ["React", "Node.js", "WebSocket", "Express", "MongoDB"],
-        color: "from-blue-500 to-purple-600",
-        github: "https://github.com/Aditya19110/Real-Time-Collaborative-Code-Editor",
-        live: "https://code-together-ak.vercel.app/",
-    },
-    {
-        title: "CollabSync",
-        description: "A modern, real-time Kanban board application built with the MERN stack and Socket.IO, featuring a premium glassmorphism UI, comprehensive task management, and seamless live collaboration.",
-        tech: ["MERN Stack", "Socket.IO", "Glassmorphism", "JWT"],
-        color: "from-teal-400 to-cyan-500",
-        github: "https://github.com/Aditya19110/collabsync",
-        live: "https://collabsync-ak.vercel.app/login",
-    },
-    {
-        title: "Silent Scan",
-        description: "A static malware analysis platform for `.exe` files. Extracts PE metadata, hashes, and integrates VirusTotal API to provide deep security insights.",
-        tech: ["Python", "Flask", "pefile", "Render", "Vercel"],
-        color: "from-red-500 to-yellow-500",
-        github: "https://github.com/Aditya19110/Static-Analyzer",
-        live: "https://static-analyzer.vercel.app/",
-    },
-    {
-        title: "Calanalyst",
-        description: "A privacy-first, CPU-optimized AI chatbot for cancer-related inquiries, featuring RAG technology and a modern Glassmorphism UI. Powered by Intel's Neural Chat LLM.",
-        tech: ["Python", "RAG", "Intel OpenVINO", "LangChain"],
-        color: "from-pink-500 to-rose-600",
-        github: "https://github.com/Aditya19110/Calanalyst",
-    },
-    {
-        title: "Agro Hub",
-        description: "A comprehensive web platform connecting farmers with technology for buying, selling, and education. Includes marketplace and crop disease detection features.",
-        tech: ["HTML", "CSS", "JavaScript", "Flask", "ML"],
-        color: "from-green-500 to-lime-500",
-        github: "https://github.com/Aditya19110/Agro_Hub",
-    }
-];
+        {
+            title: "Echo Code",
+            description: "A real-time collaborative code editor that enables multiple developers to write, edit, and debug code simultaneously.",
+            accomplishments: [
+                "WebSocket-powered live sync and activity tracking",
+                "Multi-language support and direct code execution",
+            ],
+            tech: ["React", "Node.js", "WebSocket", "Express", "MongoDB"],
+            color: "from-blue-500 to-purple-600",
+            github: "https://github.com/Aditya19110/Real-Time-Collaborative-Code-Editor",
+            live: "https://code-together-ak.vercel.app/",
+        },
+        {
+            title: "CollabSync",
+            description: "A modern, real-time Kanban board application featuring a premium glassmorphism UI.",
+            accomplishments: [
+                "Comprehensive task management and seamless live collaboration",
+                "Secure authentication and data persistence",
+            ],
+            tech: ["MERN Stack", "Socket.IO", "Glassmorphism", "JWT"],
+            color: "from-teal-400 to-cyan-500",
+            github: "https://github.com/Aditya19110/collabsync",
+            live: "https://collabsync-ak.vercel.app/login",
+        },
+        {
+            title: "Silent Scan — Static Malware Analyzer",
+            description: "A web platform that analyzes Windows executables and outputs detailed static analysis results.",
+            accomplishments: [
+                "Uploaded files get scanned with hash + VirusTotal info",
+                "Displays PE header, entropy, sections",
+            ],
+            tech: ["React", "Node.js", "pefile", "Render", "Vercel"],
+            color: "from-red-500 to-yellow-500",
+            github: "https://github.com/Aditya19110/Static-Analyzer",
+            live: "https://static-analyzer.vercel.app/",
+        },
+        {
+            title: "Calanalyst",
+            description: "A privacy-first, CPU-optimized AI chatbot for cancer-related inquiries.",
+            accomplishments: [
+                "Features RAG technology and a modern Glassmorphism UI",
+                "Powered by Intel's Neural Chat LLM",
+            ],
+            tech: ["Python", "RAG", "Intel OpenVINO", "LangChain"],
+            color: "from-pink-500 to-rose-600",
+            github: "https://github.com/Aditya19110/Calanalyst",
+        },
+        {
+            title: "Agro Hub",
+            description: "A comprehensive web platform connecting farmers with technology for buying, selling, and education.",
+            accomplishments: [
+                "Includes marketplace and crop disease detection features",
+                "Platform for farmers to sell their products directly",
+            ],
+            tech: ["HTML", "CSS", "JavaScript", "Flask", "ML"],
+            color: "from-green-500 to-lime-500",
+            github: "https://github.com/Aditya19110/Agro_Hub",
+        }
+    ];
 
     return (
         <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-[#0a0a0a]">
@@ -71,25 +91,34 @@ export const Projects = () => {
                                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
 
                                 <div className="relative z-10">
-                                    <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${project.color} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300`}>
+                                    <h3 className={`text-2xl font-bold mb-3 bg-gradient-to-r ${project.color} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300`}>
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-300 mb-6 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                                    <p className="text-gray-300 mb-4 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300 font-medium">
                                         {project.description}
                                     </p>
 
-                                    <div className="flex flex-wrap gap-2 mt-4 mb-6">
+                                    <div className="flex flex-wrap gap-2 mb-4">
                                         {project.tech.map((tech, i) => (
                                             <span
                                                 key={i}
-                                                className="bg-blue-500/10 text-blue-400 py-2 px-4 rounded-full text-xs font-medium hover:bg-blue-500/20 hover:scale-105 transition-all duration-300 border border-blue-500/20"
+                                                className="bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-xs font-semibold hover:bg-blue-500/20 transition-all duration-300 border border-blue-500/20"
                                             >
                                                 {tech}
                                             </span>
                                         ))}
                                     </div>
 
-                                    <div className="flex gap-4">
+                                    <ul className="mb-6 space-y-2 text-sm text-gray-400 list-none">
+                                        {project.accomplishments?.map((acc, i) => (
+                                            <li key={i} className="flex gap-2 items-start">
+                                                <span className="text-green-400 font-bold">✔</span>
+                                                <span>{acc}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    <div className="flex gap-4 border-t border-white/10 pt-4 mt-auto">
                                         {project.github && (
                                             <a
                                                 href={project.github}

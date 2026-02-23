@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { RevealOnScroll } from '../RevealOnScroll';
-import { 
-  SiReact, SiNodedotjs, SiMongodb, SiPython, SiJavascript, 
-  SiTailwindcss, SiGit, SiDocker, SiPostgresql, SiTypescript,
-  SiFigma, SiVercel, SiNetlify, SiFirebase, SiExpress,
-  SiFlutter, SiDart, SiTensorflow, SiOpencv, SiFlask
+import {
+  SiReact, SiNodedotjs, SiMongodb, SiPython,
+  SiTailwindcss, SiGit, SiPostgresql,
+  SiFigma, SiVercel, SiExpress,
+  SiNextdotjs, SiRender, SiPostman, SiSupabase
 } from 'react-icons/si';
-import { FaAws, FaGithub } from 'react-icons/fa';
 
 export const SkillsShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
@@ -14,44 +13,35 @@ export const SkillsShowcase = () => {
   const skillCategories = {
     frontend: [
       { name: 'React', icon: SiReact, color: 'text-blue-400', level: 90 },
-      { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400', level: 85 },
-      { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600', level: 80 },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-white', level: 85 },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400', level: 90 },
-      { name: 'HTML/CSS', icon: null, color: 'text-orange-400', level: 95 },
     ],
     backend: [
       { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-400', level: 85 },
       { name: 'Express.js', icon: SiExpress, color: 'text-gray-400', level: 80 },
+      { name: 'Python', icon: SiPython, color: 'text-yellow-300', level: 90 },
+    ],
+    databases: [
       { name: 'MongoDB', icon: SiMongodb, color: 'text-green-500', level: 85 },
       { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400', level: 75 },
-      { name: 'Python', icon: SiPython, color: 'text-yellow-300', level: 90 },
-      { name: 'Flask', icon: SiFlask, color: 'text-gray-300', level: 80 },
+      { name: 'Supabase', icon: SiSupabase, color: 'text-emerald-500', level: 80 },
     ],
-    mobile: [
-      { name: 'Flutter', icon: SiFlutter, color: 'text-blue-400', level: 85 },
-      { name: 'Dart', icon: SiDart, color: 'text-blue-600', level: 80 },
-      { name: 'Firebase', icon: SiFirebase, color: 'text-orange-400', level: 75 },
-    ],
-    ai: [
-      { name: 'TensorFlow', icon: SiTensorflow, color: 'text-orange-500', level: 75 },
-      { name: 'OpenCV', icon: SiOpencv, color: 'text-green-400', level: 70 },
-      { name: 'Python ML', icon: SiPython, color: 'text-yellow-300', level: 85 },
+    devops: [
+      { name: 'Vercel', icon: SiVercel, color: 'text-white', level: 85 },
+      { name: 'Render', icon: SiRender, color: 'text-purple-400', level: 80 },
     ],
     tools: [
       { name: 'Git', icon: SiGit, color: 'text-orange-600', level: 90 },
-      { name: 'GitHub', icon: FaGithub, color: 'text-gray-300', level: 90 },
-      { name: 'Docker', icon: SiDocker, color: 'text-blue-500', level: 70 },
-      { name: 'AWS', icon: FaAws, color: 'text-orange-400', level: 65 },
-      { name: 'Vercel', icon: SiVercel, color: 'text-white', level: 85 },
       { name: 'Figma', icon: SiFigma, color: 'text-purple-400', level: 75 },
+      { name: 'Postman', icon: SiPostman, color: 'text-orange-500', level: 85 },
     ]
   };
 
   const categories = [
     { id: 'frontend', name: 'Frontend', emoji: '🎨' },
     { id: 'backend', name: 'Backend', emoji: '⚙️' },
-    { id: 'mobile', name: 'Mobile', emoji: '📱' },
-    { id: 'ai', name: 'AI/ML', emoji: '🤖' },
+    { id: 'databases', name: 'Databases', emoji: '🗄️' },
+    { id: 'devops', name: 'DevOps', emoji: '🚀' },
     { id: 'tools', name: 'Tools', emoji: '🛠️' },
   ];
 
@@ -69,11 +59,10 @@ export const SkillsShowcase = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  activeCategory === category.id
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeCategory === category.id
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
                     : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
-                }`}
+                  }`}
               >
                 <span className="mr-2">{category.emoji}</span>
                 {category.name}
@@ -98,7 +87,7 @@ export const SkillsShowcase = () => {
                     </div>
                     <span className="text-gray-400 text-sm font-medium">{skill.level}%</span>
                   </div>
-                  
+
                   {/* Progress Bar */}
                   <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                     <div
